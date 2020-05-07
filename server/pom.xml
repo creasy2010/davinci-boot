@@ -11,7 +11,7 @@
         <groupId>edp.davinci</groupId>
         <artifactId>davinci-parent_3.01</artifactId>
         <version>0.3.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath/>
         <!--    @lucas    -->
     </parent>
 

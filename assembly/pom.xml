@@ -8,8 +8,8 @@
         <artifactId>davinci-parent_3.01</artifactId>
         <groupId>edp.davinci</groupId>
         <version>0.3.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
         <!--    @lucas    -->
+        <relativePath/>
     </parent>
 
     <artifactId>davinci-assembly_3.0.1</artifactId>
