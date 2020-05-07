@@ -14,7 +14,8 @@
 #   limitations under the License.
 #  >>
 
-DAVINCI3_HOME: /Users/dong/Falcon/temp/Davinci/davinci-boot
+#DAVINCI3_HOME: /Users/dong/Falcon/temp/Davinci/davinci-boot
+DAVINCI3_HOME: ./
 mail:
   enabled: false  #是否需要使用邮箱
 
