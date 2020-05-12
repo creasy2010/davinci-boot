@@ -1,8 +1,27 @@
 version: '3'
 services:
-  docker-mysql:
+  davinci:
     restart: always
     container_name: davincispringboot
     image: yangxiaodong/davinci:latest
     ports:
       - "8081:8081"
+    depends_on:
+      - mysql-db
+
+  mysql-db:
+    image: mysql:5.6
+    restart: always
+    environment :
+      MYSQL_USER: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: davinci0.3
+      MYSQL_ROOT_HOST: "%"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./bin/davinci.sql:/docker-entrypoint-initdb.d/cnpm-init.sql
+      - davincis-db-volume:/var/lib/mysql
+
+volumes:
+  davincis-db-volume:
