@@ -1,13 +1,13 @@
 version: '3'
 services:
-#  davinci:
-#    restart: always
-#    container_name: davincispringboot
-#    image: yangxiaodong/davinci:latest
-#    ports:
-#      - "8081:8081"
-#    depends_on:
-#      - mysql-db
+  davinci:
+    restart: always
+    container_name: davincispringboot
+    image: yangxiaodong/davinci:latest
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mysql-db
 
   mysql-db:
     image: mysql:5.6
