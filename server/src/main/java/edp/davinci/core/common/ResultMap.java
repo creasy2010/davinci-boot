@@ -110,7 +110,11 @@ public class ResultMap extends HashMap<String, Object> {
         return this;
     }
 
-
+    /**
+     * sdfsdfs
+     * @param request
+     * @return
+     */
     public ResultMap failAndRefreshToken(HttpServletRequest request) {
         this.code = HttpCodeEnum.FAIL.getCode();
         this.header = new HashMap<>();

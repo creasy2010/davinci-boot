@@ -7,7 +7,8 @@ docker build -t yangxiaodong/davinci:latest .
 
 docker images 
 
-docker run davinci:yangxiaodong
+docker run -d -p 8081:8081 yangxiaodong/davinci:latest
+docker run -p 8081:8081 yangxiaodong/davinci:latest
 docker push yangxiaodong/davinci:latest
 
 ### 效果预览

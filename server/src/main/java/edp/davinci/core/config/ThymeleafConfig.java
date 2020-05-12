@@ -41,6 +41,7 @@ public class ThymeleafConfig {
 
     @PostConstruct
     public void webResourcesResolver() {
+        System.out.println("当前webResources路径为:"+webResources);
         FileTemplateResolver resolver = new FileTemplateResolver();
         resolver.setPrefix(webResources);
         resolver.setSuffix(".html");
