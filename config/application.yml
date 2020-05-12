@@ -48,7 +48,6 @@ source:
   connection-error-retry-attempts: 0
   query-timeout: 600000
   validationQueryTimeout: 30000
-
   enable-query-log: false
   result-limit: 1000000
 
@@ -60,9 +59,9 @@ spring:
 
   ## davinci datasouce config
   datasource:
-    url: jdbc:mysql://0.0.0.0:3306/davinci0.3?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true
-    username: root
-    password: root
+    url: ${MYSQL_URL:jdbc:mysql://0.0.0.0:3306/davinci0.3?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PAASWORD:root}
     driver-class-name: com.mysql.jdbc.Driver
     initial-size: 2
     min-idle: 1

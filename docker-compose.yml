@@ -4,6 +4,10 @@ services:
     restart: always
     container_name: davincispringboot
     image: yangxiaodong/davinci:latest
+    environment:
+      MYSQL_URL: jdbc:mysql://192.168.3.3:3306/davinci0.3?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true
+      MYSQL_USERNAME: root
+      MYSQL_PAASWORD: root
     ports:
       - "8081:8081"
     depends_on:
