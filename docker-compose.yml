@@ -15,7 +15,7 @@ services:
     environment :
       MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: root
-      DAVINCI3_HOME:~/davinci-boot
+      DAVINCI3_HOME: /root/davinci-boot
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_DATABASE: davinci0.3
       MYSQL_ROOT_HOST: "%"
@@ -24,7 +24,7 @@ services:
     volumes:
       - ./bin/initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
       - davincis-db-volume:/var/lib/mysql
-      - ./bin:~/davinci-boot/bin
+      - ./bin:/root/davinci-boot/bin
 
 volumes:
   davincis-db-volume:
